@@ -8,7 +8,11 @@ const getHumanChoice = () => prompt("Pick rock, paper or scissors")
 humanScore = 0
 omputerScore = 0  
 
-const playRound = (humanChoice, computerChoice) => {
+const playGame = () => {
+  humanScore = 0
+  computerScore = 0
+
+  const playRound = (humanChoice, computerChoice) => {
   humanChoice = humanChoice.toLowerCase()
 
   if (humanChoice === computerChoice) {
@@ -26,4 +30,10 @@ const playRound = (humanChoice, computerChoice) => {
   }
 }
 
-playRound(getHumanChoice(), getComputerChoice())
+for (let i = 0; i < 5; i++) {
+  playRound(getComputerChoice(), getHumanChoice())
+  console.log(`${humanScore} - ${computerScore}`)
+}
+}
+
+playGame()
