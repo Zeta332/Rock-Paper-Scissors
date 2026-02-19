@@ -1,39 +1,27 @@
 const getComputerChoice = () => {
-  const options = ["rock", "paper", "scissors"]
+  const options = ["patra", "hartie", "foarfeca"]
   return options[Math.floor(Math.random() * 3)]
 }
 
-const getHumanChoice = () => prompt("Pick rock, paper or scissors")
+const getHumanChoice = () => prompt("Alege piatra, hartie sau foarfeca")
 
 humanScore = 0
 omputerScore = 0  
-
-const playGame = () => {
-  humanScore = 0
-  computerScore = 0
 
   const playRound = (humanChoice, computerChoice) => {
   humanChoice = humanChoice.toLowerCase()
 
   if (humanChoice === computerChoice) {
-    console.log("Draw!")
+    console.log("Egalitate!")
   } else if (
-    (humanChoice === "rock" && computerChoice === "scissors") ||
-    (humanChoice === "paper" && computerChoice === "rock") ||
-    (humanChoice === "scissors" && computerChoice === "paper")
+    (humanChoice === "piatra" && computerChoice === "foarfeca") ||
+    (humanChoice === "hartie" && computerChoice === "piatra") ||
+    (humanChoice === "foarfeca" && computerChoice === "hartie")
   ) {
-    console.log("You win!")
+    console.log("Ai castigat!")
     humanScore++
   } else {
-    console.log("You lose!")
+    console.log("Ai pierdut!")
     computerChoice++
   }
 }
-
-for (let i = 0; i < 5; i++) {
-  playRound(getComputerChoice(), getHumanChoice())
-  console.log(`${humanScore} - ${computerScore}`)
-}
-}
-
-playGame()
