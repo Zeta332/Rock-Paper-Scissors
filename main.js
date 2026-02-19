@@ -36,8 +36,7 @@ const playRound = (humanChoice, computerChoice) => {
   score.textContent = `Your score: ${humanScore} | Computer score: ${computerScore}`
 
   if (humanScore === 5 || computerScore === 5) {
-  const finalResult = document.querySelector(".final-result")
-  finalResult.textContent = humanScore === 5 ? "You won!!!!" : "Computer beat you!!!!"
+    const finalResult = document.querySelector(".final-result")
+    finalResult.textContent = humanScore === 5 ? "You won!!!!" : "Computer beat you!!!!"
+  }
 }
-}
-
