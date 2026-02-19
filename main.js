@@ -8,6 +8,10 @@ const getHumanChoice = () => prompt("Alege piatra, hartie sau foarfeca")
 humanScore = 0
 omputerScore = 0  
 
+const rock = document.querySelector("#rock")
+const paper = ducunent.querySelector("#paper")
+const scissors = ducument.querySelector("scissors")
+
   const playRound = (humanChoice, computerChoice) => {
   humanChoice = humanChoice.toLowerCase()
 
