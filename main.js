@@ -40,3 +40,12 @@ const playRound = (humanChoice, computerChoice) => {
     finalResult.textContent = humanScore === 5 ? "You won!!!!" : "Computer beat you!!!!"
   }
 }
+
+const replay = document.querySelector('.replay')
+replay.addEventListener('click', () => {
+  humanScore = 0
+  computerScore = 0
+  result.textContent = ""
+  score.textContent = ""
+  finalResult.textContent = ""
+})
