@@ -18,6 +18,10 @@ const result = document.querySelector(".result")
 const score = document.querySelector(".score")
 
 const playRound = (humanChoice, computerChoice) => {
+  // Stop playing once either score reaches 5
+  if (humanScore === 5 || computerScore === 5) {
+    return
+  }
 
   if (humanChoice === computerChoice) {
     result.textContent = "Draw!"
